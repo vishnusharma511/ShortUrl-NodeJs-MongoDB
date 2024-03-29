@@ -1,4 +1,5 @@
 const shortid = require("shortid");
+const ejs = require("ejs");
 
 const Url = require("../models/url");
 
@@ -46,10 +47,9 @@ async function handleAnalytics(req, res) {
 
 async function handleGetAllShortUrl(req, res) {
   const data = await Url.find({});
-
-  res.end(`
-    ${data.map((url) => `<p>${url.shortUrl}</p>`)}
-    `);
+  res.render("url/index", {
+    urls: data,
+  });
 }
 
 module.exports = {
