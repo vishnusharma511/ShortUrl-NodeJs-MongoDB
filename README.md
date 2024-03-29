@@ -44,3 +44,8 @@ Displays analytics for the provided short URL, including visit history.
   curl http://localhost:8000/url/analytics/GePeRPUz6
 
 
+
+## Screenshots
+
+![App Screenshot](Screenshot.png)
+
